@@ -11,7 +11,7 @@ class Main {
         const chefs = document.querySelectorAll('[data-component="Chef"]');
         for (let i = 0; i < chefs.length; i++) {
             const Chef = chefs[i];
-            new Chef(element);
+            new Chef(chef);
         }
     }
 }
