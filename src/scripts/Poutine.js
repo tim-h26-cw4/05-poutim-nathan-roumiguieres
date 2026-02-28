@@ -21,11 +21,10 @@ export default class Poutine {
     buttonClicked.classList.add('is-active');
     this.selectedType = buttonClicked.innerText;
     this.updatePhoto();
-
-    updatePhoto(){
-      const image = this.element.querySelector('img');
-      image.classList.add('is-active');
-      image.src = `assets/images/${this.selectedType}.png`;
-    }
+  }
+  updatePhoto() {
+    const image = this.element.querySelector('img');
+    image.classList.add('is-active');
+    image.src = `assets/images/${this.selectedType}.png`;
   }
 }
