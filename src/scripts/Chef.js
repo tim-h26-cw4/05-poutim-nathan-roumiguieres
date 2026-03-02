@@ -4,7 +4,7 @@ export default class Chef {
   constructor(element) {
     this.element = element;
     this.menu = [];
-    this.container = this.element.querySelectorAll('.js-container');
+    this.container = this.element.querySelector('.js-container');
     this.init();
   }
 
@@ -15,7 +15,7 @@ export default class Chef {
       const instance = new Poutine(poutine);
       this.menu.push(instance);
     }
-    const btnValidate = document.querySelector('.js-validate');
+    const btnValidate = this.element.querySelector('.js-validate');
     btnValidate.addEventListener('click', this.sendOrder.bind(this));
   }
 

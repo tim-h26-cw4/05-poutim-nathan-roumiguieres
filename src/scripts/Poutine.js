@@ -1,21 +1,21 @@
 export default class Poutine {
   constructor(element) {
-    this.element = this.element;
-    this.poutines = this.element.querySelectorAll('.js-poutine');
+    this.element = element;
+    this.buttons = this.element.querySelectorAll('.js-poutine');
     this.selectedType = '';
     this.init();
   }
 
   init() {
-    for (let i = 0; i < this.poutines.length; i++) {
-      const button = this.poutines[i];
-      button.addEventListener('click', this.selectedType.bind(this));
+    for (let i = 0; i < this.buttons.length; i++) {
+      const button = this.buttons[i];
+      button.addEventListener('click', this.selectType.bind(this));
     }
   }
 
   selectType(event) {
-    for (let i = 0; i < this.poutines.length; i++) {
-      this.poutines[i].classList.remove('is-active');
+    for (let i = 0; i < this.buttons.length; i++) {
+      this.buttons[i].classList.remove('is-active');
     }
     const buttonClicked = event.currentTarget;
     buttonClicked.classList.add('is-active');
