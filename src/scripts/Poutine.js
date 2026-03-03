@@ -1,7 +1,7 @@
 export default class Poutine {
   constructor(element) {
     this.element = element;
-    this.poutines = this.element.querySelectorAll('.bouton');
+    this.poutines = this.element.querySelectorAll('.button');
     this.selectedType = '';
     this.init();
   }
